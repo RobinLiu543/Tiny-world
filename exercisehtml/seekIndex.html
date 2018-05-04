@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <p id= "seek">No succession is easy to get.</p>
+    <input id="inval" type="text" >
+    <input  type="button" onclick="seekIndex()" value="seek">
+    <p id = "putout" > </p>
+    <script>
+
+    function seekIndex(){
+      var seekobj =  document.getElementById("seek").innerHTML;
+      var printout = document.getElementById("putout");
+      var inputval = document.getElementById("inval").value;
+      var indexNum = seekobj.indexOf(inputval);
+      if (indexNum<0){
+        alert("无匹配字符");
+      }else {
+        printout.innerHTML="搜查询的字符位置为："+ indexNum;
+      }
+
+
+    }
+    </script>
+  </body>
+</html>

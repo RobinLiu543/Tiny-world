@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <script>
+
+
+    function Elementer() {
+      var a = document.getElementById("arrele");
+      var _a = arguments;
+      self = this;
+      if (!(arguments instanceof Array)) {
+        _a = [arguments];
+      }；
+
+      for (var i = 0, ar = _a.length; i < ar; i++) {
+        _a = _a[i];
+        _a.onfocus = function() {
+          this.style.imeMode = "disabled";
+        };
+
+      };
+    }
+
+
+    //Elementer(_arrele);
+  </script>
+  <input type="text" id="arrele">
+</body>
+
+</html>

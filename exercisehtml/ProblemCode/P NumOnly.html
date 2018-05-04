@@ -1,0 +1,51 @@
+<!--
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="number" value="onlyNum" ><br><br>
+    <input type="text" pattern=[0-9]{3} name="numberonly" title="num"><br><br>
+    <input type="text" >
+    <input type="submit">
+  </body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <script>
+    var onlyNum = document.getElementById("onlyNum");
+    //document.write(typeof _onlyNum);
+
+  var  cleanNum=function(tThis) {
+      var _v=tThis.value;
+      tThis.value=_v.repalce(/\D/g, "");
+    }
+
+    onlyNum.onfocus = function() {
+      cleanNum(this);
+    }
+
+    onlyNum.onkeyup = function {
+      cleanNum(this);
+    }
+
+    onlyNum.onblur = function() {
+      cleanNum(this);
+    }
+  </script>
+
+  <input type="text" id="onlyNum">
+</body>
+
+</html>

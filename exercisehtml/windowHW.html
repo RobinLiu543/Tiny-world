@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery
+/jquery-1.4.min.js"></script>
+<script>
+$(document).ready(function() {
+  $("#click").click(function(){
+    $(".wh").text("Height:"+$(window).height()+"\nWidth:"+$(window).width());
+    $(".hw").html("Height:"+$(document).height()+"\n"+"Width:"+$(document).width());
+  });
+});
+</script>
+  </head>
+  <body>
+  <button id = "click"> clickme </button>
+  <p>window</p>
+  <p class = "wh"></p>
+  <p>document</p>
+  <p class = "hw"></p>
+
+  </body>
+</html>

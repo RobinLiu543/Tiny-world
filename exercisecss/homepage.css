@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+}
+
+/*主页K字*/
+
+.home {
+  display: inline-block;
+  text-decoration: none;
+  transition-duration: 0.3s;
+  font-size: 700px;
+  font-weight: bold;
+  font-family: fantasy;
+  margin: 0px;
+  background-color: lightgrey;
+  border: solid black;
+  position: relative;
+  left: 500px;
+  width: 535px;
+  text-align: center;
+  height: 770px;
+  cursor: pointer;
+  color: white;
+
+}
+
+.home::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+
+.home:hover {
+  animation: change 1s infinite;
+}
+
+@keyframes change {
+  20% {
+    transform: scale(1);
+  }
+}
+
+.home:hover::before, .pp:hover:focus, .pp:hover:active {
+  transform: scaleY(1);
+}
+
+/*输入框*/
+
+input {
+  position: relative;
+  background: transparent;
+  color: rgb(194, 193, 196);
+  outline: none;
+  border: solid white;
+  border: solid rgb(194, 193, 196) 1px;
+  border-radius: 50%;
+  padding: 0px 20px;
+  height: 30px;
+  width: 100px;
+  font-size: 20px;
+  left: 10px;
+  bottom: 2px;
+  box-shadow: 1px 2px 5px rgb(164, 161, 164);
+}
+
+input:hover {
+  transform: scale(1.1);
+}
+
+::-moz-placeholder {
+  color: rgb(194, 193, 196);
+  font-size: 17px;
+  text-align: center;
+}
+
+::-webkit-input-placeholder {
+  color: rgb(194, 193, 196);
+  font-size: 17px;
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  color: rgb(194, 193, 196);
+  font-size: 17px;
+  text-align: center;
+}
+
+p {
+  display: inline-block;
+  position: relative;
+  top:100px;
+  left:20px;
+  padding: 0 50px;
+  color: rgb(194, 193, 196);
+  font-size: 30px;
+}
+
+p.top>span {
+  font-size: 15px;
+  opacity: 0;
+}
+
+.hint, .Yes, .No {
+  cursor: pointer;
+}
+
+#hint-first {
+
+  font-size: 18px;
+  opacity: 0;
+}
+.Yes,.No{
+  opacity: 0;
+}
+
+
+#hint-second {
+  font-size: 19px;
+  opacity: 0;
+
+}
+
+#hint-third {
+  font-size: 19px;
+  opacity: 0;
+
+}

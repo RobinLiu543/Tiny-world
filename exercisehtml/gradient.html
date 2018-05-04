@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!--linear-gradient默认是从上到下渐变
+    -->
+    <style>
+    .gra{
+      background: blue;
+      position: relative;
+      border-radius:50%;
+      height: 200px;
+      width: 100px;
+      -webkit-animation:sun 5s infinite  alternate;
+      -webkit-animation-play-state:paused;
+      -webkit-animation-play-state:running;
+    }
+
+
+    .gra:hover{
+      box-shadow: rgb(108,186,233) 10px 10px 20px 2px ;
+      cursor:w-resize;
+      height: 500px;
+      width:500px;
+      background: radial-gradient(rgb(0,221,101),rgb(58,29,196)10%,
+      rgb(200,23,235))
+    }
+
+
+
+    @keyframes  sun{
+      0% {top:10px;left:10px;}
+      30% {top:100px;left:10px;}
+      60% {top:100px;left:100px;}
+      100% { top:10px;left:left:100px;}
+
+    }
+    -webkit-@keyframes  sun{
+      0% { top:10px;left:10px;}
+      30% { top:100px;left:10px;}
+      60% { top:100px;left:100px;}
+      100% { top:10px;left:left:100px;}
+
+    }
+
+    </style>
+
+    <div class="gra"
+    </div>
+
+  </body>
+</html>

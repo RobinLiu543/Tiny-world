@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    输入大小写字母、数字、下划线：
+<input type="text" onkeyup="this.value=this.value.replace(/[^\w_]/g,'');"> <br>
+
+输入小写字母、数字、下划线：
+<input type="text" onkeyup="this.value=this.value.replace(/[^a-z0-9_]/g,'');"> <br>
+
+输入数字和点
+<input type="text" onkeyup="value=value.replace(/[^\d.]/g,'')"><br>
+
+输入中文:
+<input type="text" onkeyup="this.value=this.value.replace(/[^\u4e00-\u9fa5]/g,'')">  <br>
+
+输入数字:
+<input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')">  <br>
+
+输入英文:
+<input type="text" onkeyup="this.value=this.value.replace(/[^a-zA-Z]/g,'')"><br>
+
+输入中文、数字、英文:
+<input onkeyup="value=value.replace(/[^\w\u4E00-\u9FA5]/g, '')">  <br>
+
+输入数字和字母：
+<input onKeyUp="value=value.replace(/[\W]/g,'')">  <br>
+
+  </body>
+</html>

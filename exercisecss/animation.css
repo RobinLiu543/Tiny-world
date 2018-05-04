@@ -1,0 +1,159 @@
+a {
+  display: inline-block;
+  text-decoration: none;
+  margin: 20px;
+  color: rgb(93, 88, 90);
+  background-color: rgb(195, 198, 195);
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  transition-duration: 0.4s;
+  border-radius: 10%;
+  vertical-align: middle;
+  position: relative;
+}
+
+div{
+  max-width: 400px;
+  margin: 50px  50px ;
+  padding: 0 20px;
+  border: solid black;
+  position: relative;
+}
+div#first{
+  top:10px;
+}
+div#second{
+  top:10px;
+}
+
+.grow, .circle, .shadow, .word {
+  padding: 10px 20px;
+}
+
+
+/*grow*/
+
+.grow::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(168, 201, 24);
+  border-radius: 10%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition-duration: 3s;
+  transition-property: transform;
+  transition-timing-function: ease-in;
+}
+
+.grow:hover::before, .grow:focus::before, .grow:active::before {
+  transform: scaleX(1);
+}
+
+.grow:hover {
+  color: white;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  25% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+}
+
+/*shadow*/
+
+.shadow::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-radius: 10%;
+  border: rgb(195, 198, 195) solid 10px;
+  opacity: 0.5;
+}
+
+.shadow:hover::before {
+  animation: spread 0.2s;
+}
+
+@keyframes spread {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scaleX(1.2) scaleY(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*circle*/
+.circle::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 10px;
+  bottom: 0px;
+  left: 10px;
+  right: 0px;
+  height: 20px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: rgb(195, 198, 195);
+}
+
+.circle:hover::before {
+  box-shadow: 0px 33px 15px;
+}
+
+.circle:hover {
+  transform: scale(1.2);
+}
+
+/*word*/
+
+.word {
+  font-size: 100px;
+}
+
+.word::before {
+  content:"L";
+
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(213,71,99);
+  border-radius: 10%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition-duration: 0.1s;
+  transition-property: transform;
+  transition-timing-function: ease-in;
+}
+
+.word:hover::before {
+  transform: scaleY(1);
+}
+.word:hover{
+  color:white;
+  animation:change 0.1s infinite;
+
+}
+@keyframes change{
+  100% {transform:scale(1);}
+}

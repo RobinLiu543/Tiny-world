@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<script>
+//var _ban=document.getElementById("bancn");
+
+function baninputMethod(a){
+  var _a=a,
+  self=this；
+  if(!(a instanceof Array)){
+    var _a=[a];
+  };
+  for(var i=0, arrle=_a.length; i<arrle;i++){
+    var arrl=_a[i];
+    arrl.onfocus=function(){
+      this.style.imeMode='disabled';
+    }
+  }
+}
+
+baninputMethod(getElement("bancn"));
+function getElement(estr){
+return document.getElementById(estr);
+}
+</script>
+
+  </head>
+  <body>
+    <input type="text" id="bancn" >
+  </body>
+</html>

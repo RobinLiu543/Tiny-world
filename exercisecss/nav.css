@@ -1,0 +1,37 @@
+
+span{
+  border-style: solid;
+  border-color:red;
+  background-color: yellow;
+
+}
+li.homepage>span{
+
+  float:left;
+}
+li.webhost>span{
+
+  float:left;
+
+}
+li.homepage>{
+  display: none;
+  list-style-type: none;
+}
+.webhost-child{
+  display: none;
+}
+.dot{
+  list-style-type: none;
+}
+ul.dot li{
+
+}
+p{
+  display: none;
+}
+
+li.homepage>span:hover>ul {
+  display: block;
+
+}

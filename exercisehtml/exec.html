@@ -1,0 +1,62 @@
+<html>
+<body>
+
+<script type="text/javascript">
+
+var str = "Visit W3School, W3School is a place to study web technology.";
+var patt = new RegExp("i","g");
+var result;
+
+while ((result = patt.exec(str)) != null)  {
+  document.write(result);
+  document.write("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+  document.write(result);
+  document.write("<br />");
+  document.write(patt.lastIndex);
+  document.write("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+  document.write(result.index);
+  document.write("<br />");
+ }
+ var text = "cat,bat,sat,fat";
+ var result = text.replace(/(.at)/g,"word($1)");
+ document.write(result);
+ document.write("<br />");
+ var result1 = text.replace(/[at]/g, "o");
+ document.write(result1);
+   document.write("<br />");
+var result2 = text.split("t",3);
+document.write(result2);
+document.write("<br />");
+
+var len = text.length;
+document.write(len);
+document.write("<br />");
+for(var i = 0; i < len; i++){
+  var result3 = text.charCodeAt(i);
+  document.write(result3);
+  document.write(" ")
+}
+document.write("<br />");
+var result4 = String.fromCharCode(104,101,108,108,111,99);
+document.write(result4);
+document.write("<br />");
+ function htmlEscape(text){
+   return text.replace(/[<>"&]/g, function(match,pos,originalText){
+     switch (match) {
+       case "<":
+       return "III";
+       case ">":
+       return "RRR";
+       case "&":
+       return "&amp;";
+       case "\"":
+       return "LLL";
+
+     }
+   });
+ }
+ document.write(htmlEscape("<p class=\"greeting\">Hello world!</p>"));
+</script>
+
+</body>
+</html>

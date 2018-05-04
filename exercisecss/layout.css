@@ -1,0 +1,44 @@
+body{
+  margin:0;
+}
+div{
+
+  border:solid black 1px;
+  padding: 20px 40px;
+
+}
+
+div#box-1{
+  height: 500px;
+  width: 500px;
+  background-color:red;
+  position: relative;
+    margin: 50px auto;
+
+
+}
+div#box-2{
+  height: 300px;
+  width: 300px;
+  background-color: green;
+  position: relative;
+  margin: 50px auto;
+text-align: center;
+display: inline-block;
+vertical-align: middle;
+}
+div#box-3{
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  position: absolute;
+  margin: 10px 20px ;
+text-align: center;
+
+vertical-align: middle;
+}
+p{
+  color:white;
+  font-size: bold;
+display: inline-block;
+}

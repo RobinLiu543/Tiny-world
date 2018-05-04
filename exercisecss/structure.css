@@ -1,0 +1,50 @@
+.mostout{
+
+  left:50px;
+  width: 50rem;
+  top: 100px;
+  margin: 20px auto;
+  padding:2rem;
+  color:rgb(210,52,134);
+  border-style: solid;
+  border-color:rgba(196,231,167,.37);
+  border-width:1rem;
+  text-align: center;
+  font-size: 1.6em;
+  position:relative;
+}
+
+._mostout{
+  display: none;
+  font-size: 1.6em;
+  text-align: center;
+  width: 300px;
+  color:rgb(205,41,235);
+  margin: 20px auto;
+  padding: 0;
+  border-style: solid;
+  border-color:rgb(238,112,50);
+
+}
+
+.inner {
+  position: relative;
+  width: 15rem;
+  left:-10rem;
+  display:inline;
+
+  border-style: solid;
+  border-color:rgb(136,177,34);
+
+}
+
+  *{
+
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
